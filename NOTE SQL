@@ -1,0 +1,42 @@
+				
+			les requêtes = mysql fait par le numero '2'
+
+UPDATE T_Users  set Password='POPO' where IdUser='6'; // cahnger MDP;
+select * from T_Users; // afficher tout de from T_Users;
+USE Shop; // utiliser shop;
+ mysql -u root -p // lancer ySQL
+source Shop.sql // CHERCHER L'EXTENTION SQL "SHOP";
+discribe table// AFFICHER LE TABLEAU;
+DELETE FROM T_Users where IdUser=6; // suprimer une valeur;
+DROP TABLEAU ;// suprimer le tableau;
+CREATE TABLE T_Users (
+	IdUser				int(4)		PRIMARY KEY AUTO_INCREMENT,
+	Login				varchar(20)	NOT NULL,
+	Password			varchar(20)	NOT NULL,
+	ConnectionNumber		int(4)		NOT NULL DEFAULT 0
+) ENGINE = InnoDB; // créé le tabelau;
+SELECT * FROM T_Users;// voir le tableau;
+describe tables T_Users; // decrire le tableau;
+INSERT INTO T_Users (IdUser,  Login, Password) VALUES ( 1, 'Anderson', 'Neo');// insert les valeurs 5 fois.;
+SELECT * FROM T_Users; // afficher le tableau;
+SELECT * FROM T_Articles where UnitaryPrice < 100;// afficher le prix est superieur a 100;
+SELECT * FROM T_Articles where UnitaryPrice >= 50 and UnitaryPrice >= 150 ; // aficher les prix entre 50 et superieur a 150;
+SELECT * FROM T_Articles where UnitaryPrice ORDER BY UnitaryPrice desc; afficher par ordre descendant;
+ SELECT * FROM T_Articles where UnitaryPrice ORDER BY UnitaryPrice ASC;// aficher ordre ascendant;
+select Description  FROM T_Articles;// afficher une colone Description des articles;
+
+> select * from T_Users inner join T_Admins on T_Users.IdUsers = T_Admins.IdUser;// jointure plus afficher les utilisteurs et administrateur;
+
+select * from T_Users inner join T_Admins on T_Users.IdUsers = T_Admins.IdUser where Login='Anderson';// jointure plus afficher les utilisteurs et administrateur et le login est Anderson;
+
+
+
+
+
+
+
+
+
+
+
+
